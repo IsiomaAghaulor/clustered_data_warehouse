@@ -23,11 +23,6 @@ public class FxDealRequestProcessorService implements IFxDealRequestProcessorSer
     final FxDealRequestRepos fxDealRequestRepos;
     CustomResponse customResponse;
 
-    @Override
-    public ResponseEntity<Object> validateFxDealsRequestFields(FxDealRequest request) {
-        return logRequestFieldsToDb(request);
-    }
-
     @Transactional
     public ResponseEntity<Object> logRequestFieldsToDb(FxDealRequest request) {
         log.info("****** PERSISTING REQUEST FIELDS FOR FX DEAL WITH ID: " + request.dealUniqueId() + " TO DB ******");

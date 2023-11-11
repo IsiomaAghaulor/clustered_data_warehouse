@@ -22,7 +22,7 @@ public class FxDealController {
     @PostMapping("/api/v1/process-fxDeal")
     public ResponseEntity<Object> createFxDeal(@RequestBody @Valid FxDealRequest fxDeals){
         log.info("******** FX DEAL REQUEST RECEIVED FOR DEAL UNIQUE ID: " + fxDeals.dealUniqueId() +" ********");
-        return fxDealRequestProcessorService.validateFxDealsRequestFields(fxDeals);
+        return fxDealRequestProcessorService.logRequestFieldsToDb(fxDeals);
     }
 
 }
