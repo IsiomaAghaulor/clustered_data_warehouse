@@ -5,9 +5,9 @@ A data warehouse for Bloomberg to analyze FX deals and persist them into DB
 
 ## Requirements
 To run this application: 
-- installed docker. 
-- install make and 
-- clone the repository.
+- install docker. 
+- install make. 
+- clone git repository.
 
 
 ## Run Locally via docker or make
